@@ -1,0 +1,9 @@
+packer_cache/
+*.box
+*.swp
+output-*
+.vscode
+*.SHA256
+*.qcow2
+/tmp/
+/output/
