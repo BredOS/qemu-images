@@ -184,7 +184,7 @@ Include = /etc/pacman.d/mirrorlist
 EOF
 
   # We use the hosts package cache
-  pacstrap -c -C pacman.conf -M "${MOUNT}" base linux-aarch64 grub dosfstools efibootmgr openssh sudo btrfs-progs archlinuxarm-keyring bredos-keyring bredos-mirrorlist bred-os-release lsb-release
+  pacstrap -c -C pacman.conf -M "${MOUNT}" base linux grub dosfstools efibootmgr openssh sudo btrfs-progs archlinuxarm-keyring bredos-keyring bredos-mirrorlist bred-os-release lsb-release bredos-news bredos-logo bredos-govctl bredos-sysconf bredos-sysreport
   cp mirrorlist "${MOUNT}/etc/pacman.d/"
   cp pacman.conf.machine "${MOUNT}/etc/pacman.conf"
 }
