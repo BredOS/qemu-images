@@ -70,6 +70,10 @@ Architecture = aarch64
 SigLevel = Never
 ParallelDownloads = 6
 
+
+[BredOS-any]
+Include = ${BRED_MIRROR}
+
 [BredOS]
 Server = ${BRED_MIRROR}
 
@@ -77,15 +81,6 @@ Server = ${BRED_MIRROR}
 Include = mirrorlist
 
 [extra]
-Include = mirrorlist
-
-[community]
-Include = mirrorlist
-
-[alarm]
-Include = mirrorlist
-
-[aur]
 Include = mirrorlist
 EOF
   echo 'Server = http://dk.mirror.archlinuxarm.org/$arch/$repo'  >> mirrorlist
@@ -158,6 +153,9 @@ LocalFileSigLevel = Optional
 # repo name header and Include lines. You can add preferred servers immediately
 # after the header, and they will be used before the default mirrors.
 
+[BredOS-any]
+Include = /etc/pacman.d/bredos-mirrorlist
+
 [BredOS]
 Include = /etc/pacman.d/bredos-mirrorlist
 
@@ -165,15 +163,6 @@ Include = /etc/pacman.d/bredos-mirrorlist
 Include = /etc/pacman.d/mirrorlist
 
 [extra]
-Include = /etc/pacman.d/mirrorlist
-
-[community]
-Include = /etc/pacman.d/mirrorlist
-
-[alarm]
-Include = /etc/pacman.d/mirrorlist
-
-[aur]
 Include = /etc/pacman.d/mirrorlist
 
 # An example of a custom package repository.  See the pacman manpage for
